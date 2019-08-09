@@ -2,24 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Hexo 搭建个人博客之迁移 - 月亮忘記了</title>
+<title>前端进阶之路（一） - 月亮忘記了</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="使用 Hexo 搭建博客后，利用 Github 来管理博客迁移">
-<meta name="keywords" content="学习">
+    <meta name="description" content="前端工作一年的总结">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 搭建个人博客之迁移">
-<meta property="og:url" content="https://shuangmianxiaoq.github.io/2018/03/17/hexo搭建个人博客——迁移/index.html">
+<meta property="og:title" content="前端进阶之路（一）">
+<meta property="og:url" content="https://shuangmianxiaoq.github.io/2019/08/09/前端之路（一）/index.html">
 <meta property="og:site_name" content="月亮忘記了">
-<meta property="og:description" content="使用 Hexo 搭建博客后，利用 Github 来管理博客迁移">
+<meta property="og:description" content="前端工作一年的总结">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://shuangmianxiaoq.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-30T06:27:53.487Z">
+<meta property="og:updated_time" content="2019-08-09T02:22:41.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 搭建个人博客之迁移">
-<meta name="twitter:description" content="使用 Hexo 搭建博客后，利用 Github 来管理博客迁移">
+<meta name="twitter:title" content="前端进阶之路（一）">
+<meta name="twitter:description" content="前端工作一年的总结">
 <meta name="twitter:image" content="https://shuangmianxiaoq.github.io/images/og_image.png">
 
 
@@ -99,7 +99,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo 搭建个人博客之迁移" height="28">
+                <img src="/images/logo.svg" alt="前端进阶之路（一）" height="28">
             
             </a>
         </div>
@@ -152,17 +152,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-03-17T12:19:13.000Z">2018-03-17</time>
+                <time class="level-item has-text-grey" datetime="2019-08-09T02:03:43.000Z">2019-08-09</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a>
+                <a class="has-link-grey -link" href="/categories/学习/">学习</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 250 个字)
+                    几秒 读完 (大约 0 个字)
                 </span>
                 
                 
@@ -176,36 +176,18 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Hexo 搭建个人博客之迁移
+                前端进阶之路（一）
             
         </h1>
         <div class="content">
-            <hr>
-<blockquote>
-<p>由于使用 <code>Hexo</code> 搭建的是博客属于静态博客，如果更换电脑或是在多台电脑同时更新博客，就不能很方便的管理了<br>此时，借助 <code>Github</code> 来管理 <code>Hexo</code> 项目源代码同时更新是个不错的选择</p>
-</blockquote>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在 <code>Github</code> 创建一个仓库，用来存放 <code>Hexo</code> 项目的核心代码</p>
-<a id="more"></a>
-
-<h2 id="上传代码"><a href="#上传代码" class="headerlink" title="上传代码"></a>上传代码</h2><p>上传如下图所示的文件到 <code>Github</code>：</p>
-<p><img src="/images/hexo%E8%BF%81%E7%A7%BB/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%9B%AE%E5%BD%95.png" alt="git上传代码目录"></p>
-<ul>
-<li>使用 <code>.gitignore</code> 文件忽略部分文件的提交</li>
-</ul>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
-
-<h2 id="向-github-中添加-ssh-key"><a href="#向-github-中添加-ssh-key" class="headerlink" title="向 github 中添加 ssh key"></a>向 github 中添加 ssh key</h2><p>参照 <a href="https://shuangmianxiaoq.github.io/2018/03/17/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA/">hexo 搭建个人博客——搭建</a> 中如何添加<code>ssh key</code>到<code>github</code></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> https://github.com/shuangmianxiaoQ/myblog.git</span><br><span class="line"></span><br><span class="line">yarn</span><br><span class="line"></span><br><span class="line">node_modules/.bin/hexo clean</span><br><span class="line">node_modules/.bin/hexo g</span><br><span class="line">node_modules/.bin/hexo s</span><br><span class="line">node_modules/.bin/hexo d</span><br></pre></td></tr></table></figure>
-
-<hr>
-
+            
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/学习/">学习</a>
+                    <a class="has-link-grey -link" href="/tags/前端/">前端</a>
                 </div>
             </div>
         </div>
@@ -255,13 +237,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/03/17/hexo搭建个人博客——搭建/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Hexo 搭建个人博客</span>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/30/学习清单整理/">
+                <span class="level-item">学习清单整理</span>
+                <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
-        
         
     </div>
 </div>
